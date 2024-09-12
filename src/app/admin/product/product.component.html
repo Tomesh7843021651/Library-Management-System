@@ -1,0 +1,44 @@
+<p>product works!</p>
+
+<table border="1">
+    <tr>
+        <th>SNo</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Description</th>
+        <th>Discount</th>
+        <th>Rating</th>
+        <th>Category</th>
+    </tr>
+    <tr *ngFor="let p of list; let i = index">
+        <td>{{i+1}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.quantity}}</td>
+        <td>{{p.description}}</td>
+        <td>{{p.discount}}</td>
+        <td>{{p.rating}}</td>
+        <td>{{p.catName}}</td>
+    </tr>
+
+</table>
+
+AddNewProduct <br>
+Name: <input type="text" [(ngModel)]="name" name="" id=""> <br>
+price: <input type="number" [(ngModel)]="price" name="" id=""> <br>
+Quantity: <input type="number" [(ngModel)]="quantity" name="" id=""> <br>
+Description: <input type="text" [(ngModel)]="description" name="" id=""> <br>
+Discount: <input type="number" [(ngModel)]="discount" name="" id=""><br>
+Rating: <input type="number" [(ngModel)]="rating" name="" id=""><br>
+<!-- Rating : <input typer="number" [(ngModel)] ="" -->
+Category: <select [(ngModel)]="catid" name="" id="">
+    <option *ngFor="let cat of list2" [value]="cat.id">{{cat.name}} </option>
+</select>
+
+
+
+
+<button class="btn success-btn" (click)="addProduct()">Add</button>
+
+

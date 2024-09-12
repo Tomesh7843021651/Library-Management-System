@@ -1,0 +1,99 @@
+/* Reset default styles */
+body, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container styling */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Space between buttons */
+    padding: 20px;
+}
+
+/* Button styling */
+.btn {
+    padding: 10px 20px; /* Padding for buttons */
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 100%; /* Make buttons full-width within the container */
+    max-width: 200px; /* Limit maximum width */
+}
+
+/* Primary button */
+.primary-btn {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Blue gradient */
+}
+
+.primary-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #003d7a); /* Darker on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.primary-btn:active {
+    transform: translateY(1px); /* Press effect */
+}
+
+/* Secondary button */
+.secondary-btn {
+    background: linear-gradient(135deg, #6c757d, #5a6268); /* Gray gradient */
+}
+
+.secondary-btn:hover {
+    background: linear-gradient(135deg, #5a6268, #4e555b); /* Darker on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.secondary-btn:active {
+    transform: translateY(1px); /* Press effect */
+}
+
+/* Success button */
+.success-btn {
+    background: linear-gradient(135deg, #28a745, #218838); /* Green gradient */
+}
+
+.success-btn:hover {
+    background: linear-gradient(135deg, #218838, #1e7e34); /* Darker on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.success-btn:active {
+    transform: translateY(1px); /* Press effect */
+}
+
+/* Warning button */
+.warning-btn {
+    background: linear-gradient(135deg, #ffc107, #e0a800); /* Yellow gradient */
+}
+
+.warning-btn:hover {
+    background: linear-gradient(135deg, #e0a800, #c69500); /* Darker on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.warning-btn:active {
+    transform: translateY(1px); /* Press effect */
+}
+
+/* Danger button */
+.danger-btn {
+    background: linear-gradient(135deg, #dc3545, #c82333); /* Red gradient */
+}
+
+.danger-btn:hover {
+    background: linear-gradient(135deg, #c82333, #a71d2a); /* Darker on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.danger-btn:active {
+    transform: translateY(1px); /* Press effect */
+}

@@ -1,0 +1,37 @@
+<p>rent works!</p>
+***ON RENTING PURPOSE***
+
+<table border="1">
+    <tr>
+        <th>S No</th>
+        <th>name</th>
+        <th>description</th>
+        <th>price</th>
+        <th>discount</th>
+        <th>quantity</th>
+        <th>Amount</th>
+        <th>On Rent</th>
+        <th>action</th>
+    </tr>
+    <tr *ngFor="let item of list;let i =index">
+        <td>{{i+1}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.discount}}</td>
+        <td> <input type="number" #inputTitle [value]="item.quant" (change)="cartassign(i,inputTitle.value)"></td>
+        <!-- <td>{{item.quant*item.price*((100-item.discount)/100)}}</td> -->
+        <td>{{item.amount}}</td>
+        <td><button (click) = "rentit(item)">Rent</button></td>
+        <td>Delete</td>
+    </tr>
+
+
+
+</table>
+<br>
+<br>
+
+    {{total}}
+<br>
+<button (click)="buyPod()">buy</button>

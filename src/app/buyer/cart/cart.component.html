@@ -1,0 +1,44 @@
+<p>cart works!</p>
+<table border="1">
+    <thead>
+    <tr>
+        <th>S No</th>
+        <th>name</th>
+        <th>description</th>
+        <th>price</th>
+        <th>discount</th>
+        <th>quantity</th>
+        <th>Amount</th>
+        <th>action</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let item of list;let i =index">
+        <td>{{i+1}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.discount}}</td>
+        <td> <input type="number" #inputTitle [value]="item.quant" (change)="cartassign(i,inputTitle.value)">{{item.quantity}}</td>
+        <!-- <td>{{item.quant*item.price*((100-item.discount)/100)}}</td> -->
+        
+        <td>{{item.amount}}</td>
+        <td> <button>Delete</button> </td>
+    </tr>
+</tbody>
+
+
+
+</table>
+<br>
+<br>
+
+    {{total}}
+    5
+<br>
+<button (click)="buyPod()">buy</button>
+<!-- <button (click)="rent()">rent</button> -->
+<button (click)="onRent()">Buy On Rent</button>
+seperatly
+<button (click)="buyPod()">subscription</button>
+

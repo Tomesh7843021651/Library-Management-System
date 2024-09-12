@@ -1,0 +1,46 @@
+<!-- <p>registration works!</p>
+<p>registration works!</p>
+
+<div class="center-div">
+    <div class="register">
+
+Name: <input type="text" [(ngModel)]="name"><br>
+
+username: <input type="text" [(ngModel)]="username"><br>
+password: <input type="text" [(ngModel)]="password"><br> -->
+<!-- Account type: <select [(ngModel)]="accounttype">
+    
+    <option   [value]="3">seller</option>
+    <option  [value]="2">buyer</option>
+</select><br> -->
+
+<!-- <button (click)="register()">Register</button>
+<br>
+<button (click)="logout()">Login</button>
+<br>
+<button (click)="home()">Home</button>
+</div>
+</div> -->
+
+<div class="registration-container">
+    <h1>Register</h1>
+    <form>
+        <div class="input-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name"  [(ngModel)]="name">
+        </div>
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username"  [(ngModel)]="username">
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password"   [(ngModel)]="password">
+        </div>
+        <div class="button-group">
+            <button type="submit" class="btn register-btn"  (click)="register()" >Register</button>
+            <button type="button" class="btn login-btn" (click)="logout()" >Login</button>
+            <button type="button" class="btn home-btn" (click)="home()">Home</button>
+        </div>
+    </form>
+</div>

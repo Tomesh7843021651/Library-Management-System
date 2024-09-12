@@ -1,0 +1,19 @@
+<p>admin works!</p>
+welcome{{name}} <br> <br>
+<button class="btn primary-btn" (click)="changeWhatToShow(1)">ADD Category</button>
+
+<div *ngIf="WhatToShow==1">
+    <app-categorymgmt></app-categorymgmt>
+</div>
+
+Add Books <br><br>
+<p>seller works!</p>
+
+<button class="btn secondary-btn" (click)="changeWhatToShow(2)"> Show Category</button>
+
+<div *ngIf="WhatToShow==2">
+    <app-product></app-product>
+</div>
+
+<br><br>
+<button class="btn danger-btn" (click)="logout()">Logout</button>

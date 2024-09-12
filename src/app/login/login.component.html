@@ -1,0 +1,32 @@
+<!-- <p>login works!</p>
+<p>login works!</p>
+<div class="center-div">
+<div class="login">
+Enter User Name :: <input type="text" [(ngModel)]="username"> <br>
+Enter Password :: <input type="text" [(ngModel)]="password">  <br>
+<button (click) = "login()">Login</button>
+<button (click)="register()">Register</button>
+</div>
+</div>
+<br><br>
+<button (click)="home()">Home</button> -->
+
+<title>Login Page</title>
+<div class="login-container">
+    <h1>Login Page</h1>
+    <form>
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" [(ngModel)]="username">
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="text" id="password" name="password" placeholder="Enter your password"  [(ngModel)]="password">
+        </div>
+        <div class="button-group">
+            <button type="submit" class="btn login-btn"  (click)="login()">Login</button>
+            <button type="button" class="btn register-btn" (click)="register()">Register</button>
+            <button type="button" class="btn home-btn"  (click)="home()">Home</button>
+        </div>
+    </form>
+</div>

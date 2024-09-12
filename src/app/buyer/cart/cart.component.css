@@ -1,0 +1,94 @@
+/* Reset default styles for table */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Collapse borders */
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+thead {
+    background-color: #4a90e2; /* Header background color */
+    color: white;
+}
+
+th, td {
+    padding: 12px 15px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ddd; /* Bottom border for rows */
+}
+
+/* Header styling */
+th {
+    font-weight: bold;
+    background: linear-gradient(135deg, #4a90e2, #357abd); /* Gradient background */
+}
+
+/* Row styling */
+tbody tr {
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row color */
+}
+
+tbody tr:hover {
+    background-color: #eaf0f8; /* Hover effect */
+}
+
+/* Optional: Table container styling */
+.table-container {
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow around the table */
+    background: #fff; /* Background color for the container */
+}
+/* Existing styles for table, th, td, etc. */
+/* Include this at the end of your existing CSS */
+
+/* Actions cell styling */
+.actions {
+    text-align: center; /* Center the buttons in the cell */
+}
+
+/* Button styling */
+.btn {
+    padding: 8px 12px; /* Padding for buttons */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 0 5px; /* Space between buttons */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Edit button styling */
+.edit-btn {
+    background: linear-gradient(135deg, #4caf50, #2e7d32); /* Gradient color */
+}
+
+.edit-btn:hover {
+    background: linear-gradient(135deg, #66bb6a, #388e3c); /* Lighter on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.edit-btn:active {
+    transform: translateY(1px); /* Press effect */
+}
+
+/* Delete button styling */
+.delete-btn {
+    background: linear-gradient(135deg, #f44336, #c62828); /* Gradient color */
+}
+
+.delete-btn:hover {
+    background: linear-gradient(135deg, #ef5350, #d32f2f); /* Lighter on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+.delete-btn:active {
+    transform: translateY(1px); /* Press effect */
+}

@@ -1,0 +1,26 @@
+<p>buyer works!</p>
+
+<div class="buyer-container">
+
+<button class="btn primary-btn" (click)="changeWhatToShow(2)">Category</button>
+
+<div *ngIf="WhatToShow==2">
+    <app-show-products></app-show-products>
+</div>
+
+<button class="btn secondary-btn" (click)="changeWhatToShow(1)">Cart</button>
+<div *ngIf="WhatToShow == 1">
+    <app-cart></app-cart> </div>
+
+<button class="btn success-btn" (click)="changeWhatToShow(4)">Rent It</button>
+<div *ngIf="WhatToShow == 4">
+    <app-rent></app-rent> </div>
+
+<button class="btn warning-btn" (click) ="changeWhatToShow(3) ">History</button>
+<div *ngIf="WhatToShow==3">
+    <app-history></app-history>
+</div>
+
+   
+<button class="btn danger-btn" (click)="logout()">Logout</button>
+</div>

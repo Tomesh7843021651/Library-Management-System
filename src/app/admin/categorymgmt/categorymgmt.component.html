@@ -1,0 +1,25 @@
+<p>categorymgmt works!</p>
+
+<table border="2px">
+    <tr>
+        <th>SN</th>
+        <th>Name</th>
+        <th>AddedBY</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let cat of list; let i= index">
+        <td>{{i+1}}</td>
+        <td>{{cat.name}}</td>
+        <td>{{cat.addedBy}}</td>
+        <td>
+            <button>Delete</button> 
+        </td>
+
+    </tr>
+
+</table>
+
+<!-- Add new -->
+AddNewCategory: <br>
+Category: <input type="text" [(ngModel)]="name" name="" id="">
+<button class="btn success-btn" (click)="addCategory()">Add</button>

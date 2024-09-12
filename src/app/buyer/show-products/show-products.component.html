@@ -1,0 +1,57 @@
+<p>show-products works!</p>
+Category: <select [(ngModel)]="catid" name="" id="">
+    <option *ngFor="let cat of cats" [value]="cat.id">{{cat.name}} </option>
+</select>
+
+minPrice:<input type="number" [(ngModel)]="minprice">
+maxprice:<input type="number" [(ngModel)]="maxprice">
+minrating:<input type="number" [(ngModel)]="minrating">
+
+<button (click)="loadproducts()">load</button>
+
+
+<table border="2">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Discount</th>
+            <th>Quantity</th>
+            <th>Rating</th>
+            <th>Action</th>
+            <th>Time Added</th>
+            <th>feedback</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor=" let p of prods; let i = index ">
+        <td><b>Id:</b> {{i+1}}</td>
+        <td><b>Name: </b> {{p.name}}</td>
+
+        <td><b>price:</b> {{p.price}}</td>
+        <td><b>Description:</b> {{p.description}}</td>
+        <td><b>Discount:</b> {{p.discount}}</td>
+        <td><b>Qunatity:</b> {{p.quantity}}</td>
+        <td><b>Rating:</b> {{p.rating}}</td>
+        <td><button (click) = "addToCart(p)">AddToCart</button></td>
+        <td>
+            <ng-container *ngIf="p.quantity ===0">No Stock Available</ng-container><br>
+            <ng-container *ngIf="p.quantity > 0 && p.quantity <=2">Limited Stock Available</ng-container><br>
+            <ng-container *ngIf="p.quantity >5"> Stock Available</ng-container><br>
+            <ng-container *ngIf="p.days <2"> new Stock</ng-container><br>
+        </td>
+        <ng-container *ngIf="p.days<=5">Recently Added</ng-container><br>
+        feedback: <select [(ngModel)]="p.star" (change) = "updateRatingToServer(p,p.id)" name="" id="">
+            <option value="1">1 star</option>
+            <option value="2">2 star</option>
+            <option value="3">3 star</option>
+            <option value="4">4 star</option>
+        </select>
+    
+    </tr>
+</tbody>
+</table>
+
+
